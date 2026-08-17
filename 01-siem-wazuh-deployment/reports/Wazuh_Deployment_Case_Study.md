@@ -22,7 +22,11 @@ This project details the end-to-end deployment, configuration, and operational v
 2. **Automated Deployment:** Executed the official Wazuh installation assistant script via root privileges (`wazuh-install.sh -a`) to provision the distributed cluster components locally.
 3. **Credential Management:** Captured and secured auto-generated administrative credentials.
 4. **Service Initialization & Health Verification:** Monitored systemd service startup states (`wazuh-indexer`, `wazuh-manager`, `filebeat`, `wazuh-dashboard`) and validated web application initialization through API health checks.
-5. **Advanced Configuration:** Enabling Archive Logging (`logall` / `logall_json`)
+5. **Advanced Configuration:** Enabling Archive Logging (`logall` / `logall_json`) **Filebeat:** A secure log shipper that transports processed events and raw logs from the manager to the Elasticsearch/OpenSearch indexer.**Wazuh Indexer & Dashboard:** The storage database and web user interface used for data visualization, threat hunting, and index management.
+6. **Administrative Credential Hardening & User Management**
+To eliminate default credential vulnerabilities and secure access to the SIEM cluster, the initial auto-generated administrative password was updated to a hardened, custom passphrase.
+
+* **Service Propagation:** Verified that internal API authentication, indexer security settings, and dashboard login sessions successfully accepted the new credentials to maintain uninterrupted management access.
 
 ### Problem Statement
 By default, the Wazuh analysis engine focuses purely on high-priority security alerts (Level 3 and above) and discards routine operational data like successful logons, standard session creations, and allowed network connections to prevent storage bloat. However, comprehensive threat hunting and forensic investigations often require visibility into baseline user behaviors that standard alerts miss.
