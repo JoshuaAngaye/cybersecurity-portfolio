@@ -44,7 +44,12 @@ Because Metasploitable 2 utilizes a legacy initialization structure rather than 
 Command Executed:
 sudo /etc/init.d/wazuh-agent start
 
-### Step 5: Dashboard Verification and Telemetry Sync
+### Step 5: Automating Service Persistence on Boot
+To ensure operational resilience across system reboots without requiring manual terminal intervention, the agent initialization sequence was made persistent by modifying the system startup configuration.
+Configuration Modified: `/etc/rc.local`
+Command Appended: `/etc/init.d/wazuh-agent start` (inserted prior to `exit 0`)
+
+### Step 6: Dashboard Verification and Telemetry Sync
 Once the initialization script launched all local agent sub-daemons, the Metasploitable 2 target established an authenticated channel back to the Wazuh manager. Logging into the centralized Wazuh web UI confirmed successful node registration.
 Dashboard Status: The agent appeared as Active (1) under agent ID 001, named metasploitable, running Ubuntu 8.04 with version v4.3.10.
 
