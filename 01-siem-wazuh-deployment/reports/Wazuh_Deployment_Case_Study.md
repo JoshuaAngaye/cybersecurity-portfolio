@@ -34,24 +34,23 @@ By default, the Wazuh analysis engine focuses purely on high-priority security a
 ### Configuration Adjustment
 To capture all raw incoming logs—including successful authentication events—archive logging was explicitly enabled within the global configuration file (`/var/ossec/etc/ossec.conf`):
 
-```xml
 <global>
   <logall>yes</logall>
   <logall_json>yes</logall_json>
 </global>
 
 ## 5. Troubleshooting & Challenges
-* **Resource Bottlenecks:** Initial host performance degradation was identified due to concurrent high memory utilization and heavy virtual disk I/O. Remediation involved resource throttling and process management.
-* **Console Latency:** Transitioned from the sluggish VMware graphical console to a direct, responsive SSH session (`joshua@192.168.239.128`), vastly accelerating command execution speed and log inspection.
+* **Resource Bottlenecks:** Initial host performance degradation was identified due to concurrent high memory utilization and heavy indexing loads.
+* **Console Latency:** Transitioned from the sluggish VMware graphical console to a direct, responsive SSH session (`192.168.239.128`) for streamlined management.
 
 ## 6. Security Purpose & Operational Relevance
-In a professional Security Operations Center environment (such as those observed during my internship at UNICCON), centralized log aggregation is vital for detecting adversarial behavior. This lab mirrors standard operating procedures by establishing a single pane of glass for security monitoring, bridging the gap between raw endpoint telemetry and actionable intelligence.
+In a professional Security Operations Center environment (such as those observed during my internship at UNICCON), centralized log retention ensures forensic visibility across diverse infrastructures.
 
 ## 7. Limitations
-* **Single-Node Topology:** Configured as an All-in-One instance; high availability, load balancing, and multi-node cluster scaling were out of scope for this localized test environment.
+* **Single-Node Topology:** Configured as an All-in-One instance; high availability, load balancing, and multi-node cluster scaling are omitted.
 * **Network Isolation:** Tested within a localized virtual network rather than a live corporate perimeter.
 
 ## 8. Lessons Learned
-* Automated installation scripts significantly reduce deployment friction, but understanding underlying configuration files (`/var/ossec/etc/ossec.conf`) and service dependencies is essential for troubleshooting startup stalls.
+* Automated installation scripts significantly reduce deployment friction, but understanding underlying configuration files (`/var/ossec/etc/ossec.conf`) is vital for log tuning.
 * Securing transport layer security (TLS) certificates and managing internal user databases are critical initial steps post-deployment.
-* high speed internet is recommended for smooth operations.
+* High-speed internet is recommended for smooth operations.
