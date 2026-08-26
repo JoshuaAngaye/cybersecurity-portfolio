@@ -14,7 +14,7 @@ Every tool, configuration, and assessment documented here represents real techni
 * **02. Vulnerable Target SIEM Integration** ( [02-vulnerable-target-siem-integration/README.md](02-vulnerable-target-siem-integration/README.md) )
   Extending centralized SIEM telemetry by deploying a Wazuh agent onto a legacy 32-bit vulnerable target (Metasploitable 2). Covers out-of-band SCP file staging, overcoming OpenSSL cryptographic limits, and service initialization.
 
-* **03. Web Application Security Assessment** ( [02-web-app-security-assessment/README.md](02-web-app-security-assessment/README.md) )
+* **03. Web Application Security Assessment** ( [02-web-app-security-assessment](https://github.com/JoshuaAngaye/cybersecurity-portfolio/tree/main/02-web-app-security-assessment) )
   Authorized vulnerability testing against containerized OWASP Juice Shop. Utilizes Burp Suite for HTTP request/response interception, input manipulation, and SQL injection demonstration.
 
 * **04. Reconnaissance Assessment** ( [03-reconnaissance-assessment/README.md](03-reconnaissance-assessment/README.md) )
