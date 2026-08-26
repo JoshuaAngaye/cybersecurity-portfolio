@@ -6,23 +6,22 @@ Every tool, configuration, and assessment documented here represents real techni
 
 ---
 
-### 📂 Portfolio Projects
+## Portfolio Projects
 
-* **01. SIEM Deployment** ( [01-siem-wazuh-deployment](01-siem-wazuh-deployment) )  
+* **01. SIEM Deployment** ( [01-siem-wazuh-deployment](01-siem-wazuh-deployment) )
   Enterprise-grade Wazuh All-in-One SIEM deployment on Ubuntu 24.04 LTS. Covers indexer configuration, component health verification, and log telemetry workflows mirroring production environments.
 
-* **02. Vulnerable Target SIEM Integration** ( [02-vulnerable-target-siem-integration](02-vulnerable-target-siem-integration) )  
-  Extending centralized SIEM telemetry by deploying a Wazuh agent onto a legacy 32-bit vulnerable target (`Metasploitable 2`). Covers out-of-band SCP file staging, overcoming OpenSSL cryptographic limits, and service initialization.
+* **02. Vulnerable Target SIEM Integration** ( [02-vulnerable-target-siem-integration](02-vulnerable-target-siem-integration) )
+  Extending centralized SIEM telemetry by deploying a Wazuh agent onto a legacy 32-bit vulnerable target (Metasploitable 2). Covers out-of-band SCP file staging, overcoming OpenSSL cryptographic limits, and service initialization.
 
 * **03. Web Application Security Assessment** ( [02-web-app-security-assessment](02-web-app-security-assessment) )
   Authorized vulnerability testing against containerized OWASP Juice Shop. Utilizes Burp Suite for HTTP request/response interception, input manipulation, and SQL injection demonstration.
 
-* **04. Reconnaissance Assessment** ( [03-reconnaissance-assessment](03-reconnaissance-assessment) )  
+* **04. Reconnaissance Assessment** ( [03-reconnaissance-assessment](03-reconnaissance-assessment) )
   Target reconnaissance and server enumeration exercises. Utilizes Gobuster, Dirb, Dig, Nslookup, Wappalyzer, and Wapiti, backed by SSH cryptographic key hardening.
 
-* **05. Linux Security Operations** ( [04-linux-security-operations](04-linux-security-operations) )  
-  Practical command-line administration, process monitoring (`top`, `htop`), socket inspection (`netstat`, `ss`), and volume management (LVM) relevant to security analysis.
-
+* **05. Linux Security Operations** ( [04-linux-security-operations](04-linux-security-operations) )
+  Practical command-line administration, process monitoring (top, htop), socket inspection (netstat, ss), and volume management (LVM) relevant to security analysis.
 ---
 
 ## 🛡️ Core Competencies & Certifications
